@@ -15,4 +15,10 @@ public class GreetingController {
         return "greeting";
     }
 
+    @GetMapping
+    public String mainPage(Map<String, Object> model) {
+        model.put("hello", "Hello, user ");
+        return "index";
+    }
+
 }
