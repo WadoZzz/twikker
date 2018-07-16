@@ -2,16 +2,18 @@
 <html>
 
 <head>
-    <title>Login Page</title>
+    <title>Registration </title>
 </head>
 <body>
-<h3>Please sign in</h3>
-<form action="/login" method="post">
+<h3>Create an account</h3>
+{{#message}}
+    {{message}}
+{{/message}}
+<form action="/registration" method="post">
     <div><label> User Name : <input type="text" name="username"/> </label></div>
     <div><label> Password: <input type="password" name="password"/> </label></div>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-    <div><input type="submit" value="Sign In"/></div>
-    <div><h4> No account? <a href="/registration">Create it!</a></h4></div>
+    <div><input type="submit" value="Sign Up"/></div>
 </form>
 </body>
 </html>

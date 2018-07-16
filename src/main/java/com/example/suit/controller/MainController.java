@@ -1,4 +1,4 @@
-package com.example.suit;
+package com.example.suit.controller;
 
 import com.example.suit.domain.Message;
 import com.example.suit.repository.MessageRepo;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class GreetingController {
+public class MainController {
 
     @Autowired
     private MessageRepo messageRepo;
@@ -51,16 +51,6 @@ public class GreetingController {
         return "main";
     }
 
-    @PostMapping("filter")
-    public String filter(@RequestParam String tag, Map<String, Object> model) {
-        Iterable<Message> byTag;
-        if (tag != null && !tag.isEmpty()) {
-            byTag = messageRepo.findByTag(tag);
-        } else {
-            byTag = messageRepo.findAll();
-        }
-        model.put("message", byTag);
-        return "index";
-    }
+
 
 }
