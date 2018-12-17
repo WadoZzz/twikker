@@ -12,5 +12,7 @@
   </head>
   <body>
   $END$
+
+  <div>Test</div>>
   </body>
 </html>
