@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+<h3>Please sign in</h3>
+<form action="/login" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <div><input type="submit" value="Sign In"/></div>
+    <div><h4> No account? <a href="/registration">Create it!</a></h4></div>
+</form>
+</body>
+</html>
